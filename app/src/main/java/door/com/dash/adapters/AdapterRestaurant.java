@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import door.com.dash.R;
-import door.com.dash.Views.RetaurantDetailActivity;
+import door.com.dash.Views.RestaurantDetailActivity;
 import door.com.dash.models.Restaurant;
 import door.com.dash.models.Restaurants;
 
@@ -82,7 +82,7 @@ public class AdapterRestaurant extends RecyclerView.Adapter<AdapterRestaurant.Cu
                 @Override
                 public void onClick(View v) {
                     SelectedRestaurant = restaurantList.get(getAdapterPosition());
-                    Intent i = new Intent(mContext, RetaurantDetailActivity.class);
+                    Intent i = new Intent(mContext, RestaurantDetailActivity.class);
                     i.putExtra("Id",SelectedRestaurant.getId());
                     i.putExtra("Url",SelectedRestaurant.getWebUrl());
                     mContext.startActivity(i);

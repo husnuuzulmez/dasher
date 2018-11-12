@@ -19,6 +19,7 @@ public class Restaurant implements Serializable {
     private Address address;
     private JSONObject Jobject;
     private String WebUrl;
+    private double Avgrating;
 
     public void setJobject(JSONObject jobject) {
         Jobject = jobject;
@@ -40,6 +41,16 @@ public class Restaurant implements Serializable {
         }
     }
 
+    public void setAvgrating(JSONObject JObject) {
+        double avg  =JObject.optDouble("average_rating");
+        Avgrating = avg;
+    }
+
+    public double getAvgrating() {
+        return Avgrating;
+    }
+
+
     public Address getAddress() {
         return address;
     }
@@ -60,6 +71,8 @@ public class Restaurant implements Serializable {
             e.printStackTrace();
         }
     }
+
+
 
     public String getName() {
         return Name;
@@ -115,6 +128,7 @@ public class Restaurant implements Serializable {
         setShortProp(JObject);
         setAddress(context);
         setWebUrl();
+        setAvgrating(JObject);
 
     }
 

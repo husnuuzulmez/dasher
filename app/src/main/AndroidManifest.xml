@@ -16,11 +16,14 @@
         <activity android:name=".Views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Views.RetaurantDetailActivity"
-            android:exported="true"/>
+        <activity
+            android:name=".Views.RetaurantDetailActivity"
+            android:exported="true" />
+        <activity android:name=".Views.RestaurantDetailActivity"></activity>
     </application>
 
 </manifest>

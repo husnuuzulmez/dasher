@@ -78,7 +78,6 @@ public class DownloadTaskTest {
         signal.await(20, TimeUnit.SECONDS);
 
         int restCount = restaurants[0].getRestaurantList().size();
-   //     Assert.assertTrue(restCount>0);
         Assert.assertTrue(restCount>200);
     }
 
