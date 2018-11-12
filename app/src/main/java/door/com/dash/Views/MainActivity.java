@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         viewModel = ViewModelProviders.of(this).get(MyViewModel.class);
-        viewModel.setRview(mRecyclerView,getBaseContext());
+        viewModel.setRview(mRecyclerView,MainActivity.this);
         viewModel.collectData();
 
 
